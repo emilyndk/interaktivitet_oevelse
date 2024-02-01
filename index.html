@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="snaps.webp" alt="snaps">
+    <img src="sodavand.webp" alt="sodavand">
+    <img src="sodavand2.webp" alt="sodavand">
+    <img src="oel.webp" alt="øl">
+
+
+    <script>
+
+        window.addEventListener("load", sidenVises)
+        function sidenVises() {
+            console.log("hej");
+
+            document.querySelectorAll("img").forEach(function (img) {
+                img.addEventListener("click", checkAlcohol);
+            });
+
+
+
+            function checkAlcohol(event) {
+                var element = event.target;
+
+                if (element.alt === "øl" || element.alt === "snaps") {
+                    console.log("Indeholder alkohol");
+                } else {
+                    console.log("Alkoholfri");
+                }
+            }
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
